@@ -1,0 +1,21 @@
+FROM alpine:3.5
+MAINTAINER Rohit Valsakumar <rvalsakumar@tivo.com>
+
+ENTRYPOINT [ "runit_bootstrap.sh" ]
+
+ENV PROMETHEUS_VERSION="1.5.2"
+
+RUN adduser -HD log && addgroup log log
+
+COPY usr /usr
+RUN chmod +x /usr/bin/*.sh && packages.sh
+
+ENV PATH /TivoData/prometheus-install:$PATH
+
+COPY etc /etc
+RUN chmod -R +x /etc/service
+
+COPY TivoData /TivoData
+
+COPY build/buildInfo.json /TivoData/etc/buildinfo/build.json
+COPY build/appInfo.json /TivoData/etc/buildinfo/app.json
