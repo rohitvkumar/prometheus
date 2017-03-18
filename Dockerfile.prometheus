@@ -17,5 +17,4 @@ RUN chmod -R +x /etc/service
 
 COPY TivoData /TivoData
 
-COPY build/buildInfo.json /TivoData/etc/buildinfo/build.json
-COPY build/appInfo.json /TivoData/etc/buildinfo/app.json
+COPY build/buildInfo.json app.json /TivoData/etc/buildinfo/
