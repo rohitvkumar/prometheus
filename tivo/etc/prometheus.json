@@ -1,0 +1,15 @@
+{
+    "adminPort" : 40101,
+    "extraPort": [
+        9080, 9090, 9100
+    ],
+    "name" : "prometheus",
+    "proxy" : [
+        {
+            "service" : "prometheus",
+            "port" : 50101,
+            "type" : "dynconfigProxy"
+        }
+    ],
+    "type" : "dynconfigContainer"
+}

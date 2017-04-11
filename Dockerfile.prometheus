@@ -11,6 +11,7 @@ COPY usr /usr
 RUN chmod +x /usr/bin/*.sh && packages.sh
 
 ENV PATH /TivoData/prometheus-install:$PATH
+ENV SERVICE_NAME prometheus
 
 COPY etc /etc
 RUN chmod -R +x /etc/service

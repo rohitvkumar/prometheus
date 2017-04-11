@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mkdir -p /TivoData/Log/properties
+chown log:log /TivoData/Log/properties
+exec chpst -ulog svlogd -tt /TivoData/Log/properties

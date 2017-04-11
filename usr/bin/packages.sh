@@ -10,7 +10,7 @@ apk add --virtual build-dependencies build-base git openssl
 
 # Install required python packages
 pip install --upgrade pip
-pip install requests bottle
+pip install requests bottle mako
 
 mkdir /TivoData
 

@@ -1,0 +1,5 @@
+{
+	"description": "Hostnames for prometheus to scrape data. They should be running cadvisor and node-exporter containers",
+	"key": "hostsToMonitor",
+	"multiple": true
+}
